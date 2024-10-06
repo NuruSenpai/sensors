@@ -1,7 +1,7 @@
 package org.example.measurementserver.mapper;
 
-import org.example.sensors.DTO.MeasurementDTO;
-import org.example.sensors.entity.Measurement;
+import org.example.measurementserver.DTO.MeasurementDTO;
+import org.example.measurementserver.entity.Measurement;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

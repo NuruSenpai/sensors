@@ -1,6 +1,5 @@
 package org.example.sensors.service;
 
-import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.example.sensors.entity.Sensor;
 import org.example.sensors.repository.SensorRepository;
@@ -16,5 +15,9 @@ public class SensorServiceImpl {
             throw new IllegalArgumentException("Датчик с таким именем уже существует");
         }
         sensorRepository.save(sensor);
+    }
+
+    public boolean existsByName(String name) {
+        return sensorRepository.existsByName(name);
     }
 }

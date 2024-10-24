@@ -6,27 +6,25 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.example.api.DTO.SensorDTO;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @AllArgsConstructor
 public class MeasurementDTO {
-    private Long id;
 
-    @NotNull
-    @DecimalMin(value = "-100")
-    @DecimalMax(value = "100")
+    @NotNull(message = "измеренение не должно быть пустым")
+    @DecimalMin(value = "-100", message = "значение должно быть не меньше -100")
+    @DecimalMax(value = "100", message = "значение должно быть не больше 100")
     private BigDecimal value;
 
-    @NotNull
+    @NotNull(message = "статус погоды не должно быть пустым")
     private Boolean raining;
 
-    @NotNull
-    private Long sensorId;
+    @NotNull(message = "Не указан Id сенсора")
+    private SensorDTO sensor;
 
 
-    private LocalDateTime time;
 }

@@ -7,10 +7,7 @@ import org.example.sensors.entity.Sensor;
 import org.example.sensors.mapper.SensorMapper;
 import org.example.sensors.service.SensorServiceImpl;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/sensor")
@@ -23,5 +20,10 @@ public class SensorController {
         Sensor sensor = SensorMapper.INSTANCE.sensorDTOToSensor(sensorDTO);
         sensorService.registerSensor(sensor);
         return ResponseEntity.ok("Сенсор зарегистрирован ");
+    }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Boolean> existsByName(@PathVariable String name) {
+        return ResponseEntity.ok(sensorService.existsByName(name));
     }
 }

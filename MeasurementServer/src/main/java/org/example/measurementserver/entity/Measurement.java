@@ -26,12 +26,11 @@ public class Measurement {
     private Boolean raining;
 
 
-    @Column(name = "sensor_id", nullable = false)
-    private Long sensorId;
+    @Column(name = "sensor_name", nullable = false)
+    private String sensorName;
 
     @Column(nullable = false)
     private LocalDateTime time;
-
 
 
 

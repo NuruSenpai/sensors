@@ -6,7 +6,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.api.DTO.SensorDTO;
 
 import java.math.BigDecimal;
 

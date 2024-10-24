@@ -1,6 +1,6 @@
 package org.example.measurementserver.client;
 
-import org.example.api.DTO.SensorDTO;
+import org.example.measurementserver.DTO.SensorDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

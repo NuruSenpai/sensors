@@ -1,7 +1,7 @@
 package org.example.measurementserver.client;
 
 import lombok.RequiredArgsConstructor;
-import org.example.api.DTO.SensorDTO;
+import org.example.measurementserver.DTO.SensorDTO;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
